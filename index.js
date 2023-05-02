@@ -12,8 +12,14 @@ async function fetchUsers() {
 
 fetchUsers();
 
+function showUserPosts(id) {
+    console.log
+    window.location.href = `${window.location.origin}/user.html`;
+    console,log(id)
+}
+
 function userHTML (user) {
-    return `<div class="user-card">
+    return `<div class="user-card" onclick="showUserPosts(${user.id});">
     <div class="user-card__container">
       <h3>${user.name}</h4>
         <p><b>Email:</b> ${user.email}</p>
